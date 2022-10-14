@@ -5,6 +5,7 @@ import { Header } from '../../components/Header'
 import { ButtonText } from '../../components/ButtonText'
 import { Input } from '../../components/Input'
 import { Note } from '../../components/Note'
+import { Section } from '../../components/Section'
 
 export function Home() {
   return (
@@ -13,6 +14,7 @@ export function Home() {
         <h1>Rocket Notes</h1>
       </Brand>
       <Header />
+
       <Menu>
         <li>
           <ButtonText title="Todos" isActive />
@@ -27,7 +29,19 @@ export function Home() {
       <Search>
         <Input placeholder="Pesquisar pelo titulo" icon={FiSearch} />
       </Search>
-      <Content></Content>
+      <Content>
+        <Section title="Minhas Notas">
+          <Note
+            data={{
+              title: 'React',
+              tags: [
+                { id: '1', name: 'React' },
+                { id: '2', name: 'Rocketseat' }
+              ]
+            }}
+          />
+        </Section>
+      </Content>
       <NewNote>
         <FiPlus />
         Criar Nota

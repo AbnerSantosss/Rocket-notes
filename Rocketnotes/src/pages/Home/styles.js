@@ -48,6 +48,8 @@ export const Search = styled.div`
 `
 export const Content = styled.div`
   grid-area: content;
+  padding: 64px 64px 0;
+  overflow-y: auto; //Aui estoun deixando minha barra de rolagem em automatico, se preencher os cards ele vai aparecer, se não tiver suficiente ele vai sumir!
 `
 export const NewNote = styled.button`
   grid-area: newnote;
