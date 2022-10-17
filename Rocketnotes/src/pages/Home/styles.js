@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
   width: 100%;
@@ -51,7 +52,7 @@ export const Content = styled.div`
   padding: 64px 64px 0;
   overflow-y: auto; //Aui estoun deixando minha barra de rolagem em automatico, se preencher os cards ele vai aparecer, se não tiver suficiente ele vai sumir!
 `
-export const NewNote = styled.button`
+export const NewNote = styled(Link)`
   grid-area: newnote;
   background-color: ${({ theme }) => theme.COLORS.ORANGE};
   border: none;

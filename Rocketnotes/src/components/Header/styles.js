@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 //Nesse arquivo eu faço a estilização de tudo referente a esse compoente, inclusive outros componentes.
 
 //=======CONTAINER======//
@@ -19,7 +20,7 @@ export const Container = styled.header`
 
 //==========PROFILE=======//
 //esse componente está dentro do meu outro componete PAI o container
-export const Profile = styled.div`
+export const Profile = styled(Link)`
   display: flex;
   align-items: center;
   //a baixo eu uso o > para informar que entro do meu proffile queroa acesar a imagem//

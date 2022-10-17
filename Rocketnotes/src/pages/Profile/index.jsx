@@ -3,15 +3,16 @@ import { FiArrowLeft, FiMail, FiUser, FiLock, FiCamera } from 'react-icons/fi'
 import { Input } from '../../components/Input'
 import { Button } from '../../components/Button'
 
-import { Container, Form } from './styles'
+import { Container, Form, Avatar } from './styles'
+import { Link } from 'react-router-dom'
 
 export function Profile() {
   return (
     <Container>
       <header>
-        <a href="/">
+        <Link to="/">
           <FiArrowLeft />
-        </a>
+        </Link>
       </header>
       <Form>
         <Avatar>
@@ -21,7 +22,7 @@ export function Profile() {
           />
           <label htmlFor="avatar">
             <FiCamera />
-            <input type="text" name="" id="" />
+            <input type="file" name="avatar" id="avatar" />
           </label>
         </Avatar>
         <Input placeholder="Nome" type="text" icon={FiUser} />

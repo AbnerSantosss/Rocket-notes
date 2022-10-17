@@ -4,6 +4,8 @@ import { Input } from '../../components/Input'
 import { Button } from '../../components/Button'
 import { Container, Form, Background } from './styles'
 
+import { Link } from 'react-router-dom'
+
 export function SignUp() {
   return (
     <Container>
@@ -17,7 +19,7 @@ export function SignUp() {
         <Input placeholder="Email" type="text" icon={FiMail} />
         <Input placeholder="Senha" type="password" icon={FiLock} />
         <Button title="Cadastrar"></Button>
-        <a href="#">Voltar para o login</a>
+        <Link to="/">Voltar para o login</Link>
       </Form>
     </Container>
   )
