@@ -6,7 +6,6 @@ import { ButtonText } from '../../components/ButtonText'
 import { Input } from '../../components/Input'
 import { Note } from '../../components/Note'
 import { Section } from '../../components/Section'
-import { Link } from 'react-router-dom'
 export function Home() {
   return (
     <Container>
