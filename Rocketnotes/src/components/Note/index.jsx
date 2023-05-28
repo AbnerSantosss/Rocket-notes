@@ -10,9 +10,7 @@ export function Note({ data, ...rest }) {
         <footer>
           {
             // tag.id é uma forma de de dizer que aquele elemento é unico
-            data.tags.map(tag => (
-              <Tag key={tag.id} title={tag.name} />
-            ))
+            data.tags.map(tag => <Tag key={tag.id} title={tag.name} />)
           }
         </footer>
       )}
