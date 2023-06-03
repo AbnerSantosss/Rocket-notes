@@ -63,7 +63,7 @@ export function New() {
 
 
     alert("Nota Criada com Sucesso")
-    navigate('/');
+    navigate(-1);
   }
 
 

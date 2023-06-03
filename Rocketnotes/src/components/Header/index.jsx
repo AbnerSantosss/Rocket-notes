@@ -2,11 +2,21 @@ import { RiShutDownLine } from 'react-icons/ri' // Importa o ícone RiShutDownLi
 import { Container, Profile, Logout } from './styles' // Importa os componentes Container, Profile e Logout do arquivo './styles'
 import { useAuth } from "../../hooks/auth" // Importa o hook useAuth do diretório '../../hooks/auth'
 import { api } from '../../service/api' // Importa a instância da API do diretório '../../service/api'
+import {useNavigate} from 'react-router-dom'
+
+
+
 
 export function Header() { // Declaração de uma função de componente chamada Header
   
   const { signOut, user } = useAuth() // Destrutura o objeto retornado pelo hook useAuth, obtendo as funções signOut e o objeto user
   
+  const navigate = useNavigate()
+
+  function handleSingOut(){
+    navigate('/')
+    signOut()
+  }
   const avatarURL = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder; // Define a variável avatarURL baseada no avatar do usuário, se existir, caso contrário, usa um avatarPlaceholder
 
   return ( // Renderização do componente
@@ -21,7 +31,7 @@ export function Header() { // Declaração de uma função de componente chamada
           <strong>{user.name}</strong> 
         </div>
       </Profile>
-      <Logout onClick={signOut}>   {/* // Renderiza o componente Logout com uma função de clique definida como signOut */}
+      <Logout onClick={handleSingOut}>   {/* // Renderiza o componente Logout com uma função de clique definida como signOut */}
         <RiShutDownLine/>  {/* // Renderiza o ícone RiShutDownLine */}
       </Logout>
     </Container>
