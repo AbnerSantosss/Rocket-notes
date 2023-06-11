@@ -15,7 +15,7 @@ import {api} from '../../service/api'
 export function New() {
 
   const [title, setTitle] = useState("")
-  const [description, setDescription] = useState("")
+  const [descriptions , setdescriptions ] = useState("")
 
   const [ links, setLinks] = useState([])
   const [newLink, setNewLink] = useState("")
@@ -56,7 +56,7 @@ export function New() {
 
     await api.post('/notes', {
       title,
-      description,
+      descriptions ,
       tags,
       links
     })
@@ -83,8 +83,8 @@ export function New() {
 
           <Textarea 
           placeholder="Observações" 
-          onChange ={e => setDescription(e.target.value)}
-          value={description}
+          onChange ={e => setdescriptions (e.target.value)}
+          value={descriptions }
           />
           <Section title="links ulteis">
             {links.map((link, index) => (
